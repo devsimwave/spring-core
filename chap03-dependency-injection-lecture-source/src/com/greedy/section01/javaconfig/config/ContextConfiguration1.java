@@ -18,8 +18,14 @@ public class ContextConfiguration1 {
 	
 	@Bean
 	public MemberDTO memberGenerator() {
-		
-		return new MemberDTO(1, "홍길동", "010-1234-5678", "hong123@gmail.com", accountGenerator());
+
+		return new MemberDTO(
+				1,
+				"홍길동",
+				"010-1234-5678",
+				"hong123@gmail.com",
+				accountGenerator()  // ← 의존성 주입
+		);
 	}
 }
 

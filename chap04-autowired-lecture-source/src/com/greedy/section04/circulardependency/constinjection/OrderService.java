@@ -1,4 +1,4 @@
-package com.greedy.section04.circulardependency;
+package com.greedy.section04.circulardependency.constinjection;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
