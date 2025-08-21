@@ -13,8 +13,8 @@ public class BeforeAttendingAdvice {
 
 	/* @Before, @After든 어노테이션이 붙은 메소드가 advice라고 한다.
 	* before이면 before advice, after면 after advice라고 불린다. */
-	@Before("execution(* com.greedy.section01.advice.annotation..*(..))") // pointcut 표현식 ..* 하위에 있는 모든 클래스와 메소드 (..) 매개변수 ..이 붙는다면 어떤 타입이든 다 포함된다라는 뜻
-//	@Before("StudentPointcut.studyPointcut()")
+//	@Before("execution(* com.greedy.section01.advice.annotation..*(..))") // pointcut 표현식 ..* 하위에 있는 모든 클래스와 메소드 (..) 매개변수 ..이 붙는다면 어떤 타입이든 다 포함된다라는 뜻
+	@Before("StudentPointcut.studyPointcut()") // StudentPointcut 클래스에 정의된 pointcut을 사용한다. @Pointcut 어노테이션이 붙은 메소드를 호출하는 것과 같다.
 	public void beforeAttending(JoinPoint joinPoint) {		// 해당 메소드가 호출되면 JoinPoint에 값이 들어가는데 대상 객체의 정보가 들어간다.
 		System.out.println("================ before attending =================");
 		System.out.println("오늘도 신나게 등원해서 입실 카드를 찍는다.");

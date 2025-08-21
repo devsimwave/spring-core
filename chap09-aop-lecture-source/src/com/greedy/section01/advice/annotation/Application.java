@@ -14,18 +14,17 @@ public class Application {
 		for(String beanName : beanNames) {
 			System.out.println("beanName : " + beanName);
 		}
-		
-		Student normalStudent = context.getBean("normalStudent", Student.class);
+
+		Student normaStudent = context.getBean("normalStudent", Student.class);
 		Student greedyStudent = context.getBean("greedyStudent", Student.class);
-		
-		System.out.println("=========== NormalStudent =============");
-		AchievementResult normalResult = normalStudent.study(new Passion(10));
+
+		System.out.println("================= NormalStudent ======================");
+		AchievementResult normalResult = normaStudent.study(new Passion(10));
 		System.out.println("NormalStudent Result : " + normalResult);
-		
-		System.out.println("=========== GreedyStudent ============");
+
+		System.out.println("================= GreedyStudent ======================");
 		AchievementResult greedyResult = greedyStudent.study(new Passion(10));
 		System.out.println("GreedyStudent Result : " + greedyResult);
-		
 	}
 
 }
